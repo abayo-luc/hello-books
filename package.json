@@ -50,7 +50,8 @@
       "src/**/*.{js,jsx,ts,tsx}",
       "!<rootDir>/node_modules/",
       "!<rootDir>/path/to/dir/",
-      "!<rootDir>/src/serviceWorker.js"
+      "!<rootDir>/src/serviceWorker.js",
+      "!<rootDir>/src/index.js"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
