@@ -23,4 +23,9 @@
             padding: 10px 0;
         }
     }
+
+    input[type=submit]:disabled,
+    button:disabled {
+        background: #dddddd;
+    }
 }
