@@ -1,0 +1,82 @@
+.auth-page {
+    color: #fff;
+    background: #000;
+    display: grid;
+    overflow: scroll;
+    grid-template-areas: 'header header header'
+        'left left right'
+        'footer footer footer';
+    grid-gap: 1px;
+
+    .header {
+        grid-area: header;
+        height: calc(100vh * 0.1);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 15px;
+
+        .right-content {
+            display: inherit;
+
+            p {
+                color: rgb(160, 158, 158);
+                font-size: 15px;
+                font-style: italic;
+
+            }
+
+            a.btn {
+                padding: 15px;
+                color: #fff;
+            }
+        }
+    }
+
+    .right-container,
+    .left-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: calc(100vh * 0.85)
+    }
+
+    .footer {
+        grid-area: footer;
+        height: calc(100vh * 0.05);
+        text-align: center;
+        font-size: 16px;
+        color: rgb(160, 158, 158);
+    }
+
+    .left-container {
+        grid-area: left;
+        background: url('../../assets/book_lover_mock.svg') #000;
+        background-size: calc((100vh -1005px)/1.5);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .right-container {
+        grid-area: right;
+
+        .auth-form {
+            width: 60%;
+        }
+    }
+
+    .auth-link {
+        text-align: center;
+
+        a.link {
+            all: unset;
+            font-size: 15px;
+            font-style: italic;
+            color: rgb(122, 121, 121);
+            cursor: pointer;
+            padding: 5px;
+        }
+    }
+}

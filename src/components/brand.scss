@@ -1,0 +1,41 @@
+.brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 12rem;
+    border: 1px dashed #FFF;
+    border-radius: 5px;
+    padding: 3px;
+    height: 3rem;
+
+    h1 {
+        font-family: 'Lobster', cursive;
+        padding-right: 3px;
+    }
+
+    img.icon {
+        height: 2rem;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        &.short-brand {
+            width: 2.5rem;
+            margin-left: 5px;
+            font-size: 12px;
+            padding: 1px;
+
+            // text-align: center;
+            .icon,
+            span {
+                display: none;
+            }
+
+            h1::after {
+                margin: 0;
+                padding: 0;
+                content: 'HB';
+            }
+        }
+    }
+}
