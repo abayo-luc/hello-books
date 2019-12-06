@@ -11,4 +11,28 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
+  height: 100%;
+  margin: auto;
+}
+
+.center {
+  position: fixed;
+  top: 50%;
+  left: 50%
+}
+
+.btn {
+  all: unset;
+  /* height: calc(1.5em + .75rem + 2px); */
+  background: #3359DF;
+  padding: 20px;
+  margin: 0px 15px;
+  -webkit-box-shadow: 1px 5px 5px 0 rgba(0, 0, 0, .09);
+  box-shadow: 1px 5px 5px 0 rgba(0, 0, 0, .09);
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
 }
