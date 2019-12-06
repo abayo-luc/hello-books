@@ -12,7 +12,7 @@ export default () => {
     <div className='auth-page'>
       <div className='header'>
         <Brand />
-        <div className='right-content'>
+        <div className='right-content hide-sm'>
           <p>Don't have an account?</p>
           <Link to='/signup' className='btn'>
             Sign up
