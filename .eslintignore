@@ -1,0 +1,5 @@
+build/**
+/coverage/**
+src/sass/**
+html-css/**
+/src/serviceWorker.js

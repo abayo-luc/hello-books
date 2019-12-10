@@ -1,0 +1,26 @@
+.custom-button {
+    width: 100%;
+
+    button,
+    button:active {
+        all: unset;
+        height: calc(1.5em + .75rem - 2px);
+        background: #3359DF;
+        width: 100%;
+        -webkit-box-shadow: 1px 5px 5px 0 rgba(0, 0, 0, .09);
+        box-shadow: 1px 5px 5px 0 rgba(0, 0, 0, .09);
+        border: none;
+        padding: 5px 0px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        margin: 15px 2px;
+        cursor: pointer;
+        text-decoration: none;
+        border-radius: 5px;
+
+        &.btn-lg {
+            padding: 10px 0;
+        }
+    }
+}

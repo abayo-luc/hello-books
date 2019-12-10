@@ -1,0 +1,133 @@
+.auth-page {
+    color: #fff;
+    background: #000;
+    display: grid;
+    overflow: scroll;
+    grid-template-areas: 'header header header'
+        'left left right'
+        'footer footer footer';
+    grid-gap: 1px;
+    height: 100vh;
+
+    .header {
+        grid-area: header;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px 15px 0px 15px;
+        align-self: flex-start;
+
+        .right-content {
+            display: inherit;
+
+            p {
+                color: rgb(160, 158, 158);
+                font-size: 15px;
+                font-style: italic;
+
+            }
+
+            a.btn {
+                padding: 15px;
+                color: #fff;
+            }
+        }
+    }
+
+    .right-container,
+    .left-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer {
+        grid-area: footer;
+        align-self: flex-end;
+        text-align: center;
+        font-size: 16px;
+        color: rgb(160, 158, 158);
+    }
+
+    .left-container {
+        grid-area: left;
+        background: url('../../assets/book_lover_mock.svg') #000;
+        background-size: calc((100vh -1005px)/1.5);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .right-container {
+        grid-area: right;
+
+        .auth-form {
+            width: 60%;
+        }
+    }
+
+    .auth-link {
+        text-align: center;
+
+        a.link {
+            all: unset;
+            font-size: 15px;
+            font-style: italic;
+            color: rgb(122, 121, 121);
+            cursor: pointer;
+            padding: 5px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        grid-template-areas:
+            'header '
+            'right'
+            'footer';
+
+        .header {
+            width: 85%;
+            justify-self: center;
+        }
+
+        .left-container {
+            display: none;
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 767px) {
+        grid-template-areas:
+            'header '
+            'right'
+            'footer';
+
+        .header {
+            justify-content: center;
+        }
+
+        .footer {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                width: 70%;
+            }
+        }
+
+        .left-container {
+            display: none;
+        }
+
+        .right-container {
+            width: 100%;
+
+            .auth-form {
+                width: 80%;
+            }
+        }
+
+    }
+}
