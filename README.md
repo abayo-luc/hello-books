@@ -1,4 +1,4 @@
-![](https://github.com/abayo-luc/hello-books/workflows/HelloBook/badge.svg)
+![](https://github.com/abayo-luc/hello-books/workflows/HelloBook/badge.svg) [![codecov](https://codecov.io/gh/abayo-luc/hello-books/branch/develop/graph/badge.svg)](https://codecov.io/gh/abayo-luc/hello-books)
 
 # hello-books-vue
 
