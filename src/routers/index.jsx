@@ -13,7 +13,17 @@ const componentLoading = Component => props => (
 export default () => (
   <BrowserRouter>
     <Switch>
-      <Route path='/login' component={componentLoading(lazyLoad('Login'))} />
+      <Route path='/' component={componentLoading(lazyLoad('Home'))} exact />
+      <Route
+        path='/login'
+        component={componentLoading(lazyLoad('Login'))}
+        exact
+      />
+      <Route
+        path='*'
+        exact
+        component={componentLoading(lazyLoad('NotFound'))}
+      />
     </Switch>
   </BrowserRouter>
 );

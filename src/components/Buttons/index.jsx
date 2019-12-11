@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './styles.scss';
 const CustomButton = ({ title, ...props }) => (
   <div className='custom-button'>
-    <button {...props}> {title}</button>
+    <button {...props}>{title}</button>
   </div>
 );
 
