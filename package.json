@@ -22,7 +22,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:unit": "yarn test -- --coverage --watchAll=false -u",
-    "coverage": "./node_modules/.bin/codecov",
     "test:e2e": "cypress open",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js src/**/*.jsx"
@@ -44,7 +43,6 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
-    "codecov": "^3.6.1",
     "cypress": "^3.7.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
