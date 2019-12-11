@@ -1,6 +1,6 @@
 name: HelloBook
 
-on: [push, pull_request]
+on: push
 
 jobs:
   build:
@@ -16,9 +16,20 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: yarn install, build, and test
-        run: |
-          yarn
-          yarn run test:unit -- -u
+      - name: Installing dependencies
+        run: yarn
         env:
           CI: true
+      - name: Running the tests
+        run: yarn run test:unit -- -u
+        env:
+          CI: true
+      - name: Uploading coverage to CodeCov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./coverage/clover.xml
+          flags: unittests
+          name: codecov-umbrella
+          yml: ./.codecov.yml
+          fail_ci_if_error: true
