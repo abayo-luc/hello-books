@@ -1,0 +1,14 @@
+{
+    "user": {
+        "id": "1f318c17-ad03-46da-91c2-948f5e827a9f",
+        "email": "me@example.com",
+        "created_at": "2019-11-03T21:45:18.228Z",
+        "updated_at": "2019-12-10T12:21:55.355Z",
+        "role": "user",
+        "bio": "<p>Software Developer</p>",
+        "phone_number": "0722139799",
+        "address": "KG 11 Av 183",
+        "avatar": "http://res.cloudinary.com/dghepsznx/image/upload/v1574171507/hello-book/Screen_Shot_2019-11-16_at_12.01.32_drg6cc.png",
+        "name": null
+    }
+}

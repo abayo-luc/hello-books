@@ -1,3 +1,5 @@
+![](https://github.com/abayo-luc/hello-books/workflows/HelloBook/badge.svg)
+
 # hello-books-vue
 
 ## Code style & Conventions
