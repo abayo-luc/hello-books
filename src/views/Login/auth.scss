@@ -9,32 +9,6 @@
     grid-gap: 1px;
     height: 100vh;
 
-    .header {
-        grid-area: header;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin: 15px 15px 0px 15px;
-        align-self: flex-start;
-
-        .right-content {
-            display: inherit;
-
-            p {
-                color: rgb(160, 158, 158);
-                font-size: 15px;
-                font-style: italic;
-
-            }
-
-            a.btn {
-                padding: 15px;
-                color: #fff;
-            }
-        }
-    }
-
     .right-container,
     .left-container {
         display: flex;

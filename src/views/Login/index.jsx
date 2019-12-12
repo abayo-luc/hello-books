@@ -8,7 +8,8 @@ import authActions from '../../store/actions/auth';
 import { useToasts } from 'react-toast-notifications';
 import './auth.scss';
 import CustomButton from '../../components/Buttons';
-import Brand from '../../components/Brand';
+import Footer from '../../components/Footer';
+import TopNav from '../../components/Navs/TopNav';
 
 export const Login = ({ handleLogin, ...props }) => {
   const history = useHistory();
@@ -21,38 +22,45 @@ export const Login = ({ handleLogin, ...props }) => {
     handleLogin({ email, password }, handleError, handleNavigation);
     event.preventDefault();
   };
+  const handleOnChange = e => {
+    setAuthState({
+      ...authState,
+      [e.target.name]: e.target.value
+    });
+  };
   if (props.success && props.isSubmitting) {
     return <Loading />;
   }
   return (
     <div className='auth-page'>
-      <div className='header'>
-        <Brand />
+      <TopNav>
         <div className='right-content hide-sm'>
           <p>Don't have an account?</p>
           <Link to='/signup' className='btn'>
             Sign up
           </Link>
         </div>
-      </div>
+      </TopNav>
       <div className='left-container' />
       <div className='right-container'>
-        <form className='auth-form' onSubmit={handleSubmit} id='sign-up-form'>
+        <form className='auth-form' onSubmit={handleSubmit} id='login-form'>
           <TextInputs
             type='email'
             icon='email'
             placeholder='Email'
+            name='email'
             value={authState.email}
-            onChange={e =>
-              setAuthState({ ...authState, email: e.target.value })}
+            onChange={handleOnChange}
+            required
           />
           <TextInputs
             type='password'
             icon='lock'
             placeholder='Password'
+            name='password'
             value={authState.password}
-            onChange={e =>
-              setAuthState({ ...authState, password: e.target.value })}
+            onChange={handleOnChange}
+            required
           />
           <CustomButton
             title='Login'
@@ -67,11 +75,7 @@ export const Login = ({ handleLogin, ...props }) => {
           </Link>
         </div>
       </div>
-      <div className='footer'>
-        <p>
-          Designed and built with all the love in the world by <b>Luc Abayo</b>
-        </p>
-      </div>
+      <Footer />
     </div>
   );
 };

@@ -2,13 +2,23 @@
     background: #000;
     width: 100vw;
     height: 100vh;
+    color: #7a7979;
 
     .content {
         height: 100%;
         width: 100%;
-        background: url('../../assets/undraw_page_not_found_su7k.svg');
+        background: url('../../assets/undraw_page_not_found_su7k.svg') #000;
         background-size: 30%;
         background-repeat: no-repeat;
         background-position: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        color: #7a7979;
+
+        .btn {
+            color: #fff
+        }
     }
 }
