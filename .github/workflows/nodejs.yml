@@ -24,8 +24,8 @@ jobs:
         run: yarn run test:unit -- -u
         env:
           CI: true
-      - name: Uploading coverage to CodeCov
-        uses: codecov/codecov-action@v1
+      - name: Codecov
+        uses: codecov/codecov-action@v1.0.5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: ./coverage/clover.xml
